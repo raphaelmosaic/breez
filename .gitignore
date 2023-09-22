@@ -2,3 +2,4 @@ config.json
 build/
 files/build/
 files/dist/
+*.spec
