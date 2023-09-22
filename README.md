@@ -49,3 +49,5 @@ It works much better than traditional autocorrection as it fixes a sentence with
 	1. ![](https://i.imgur.com/Z4qWjhi.png)
 
 You are able to use Breez with your selected shortcut now. Enter a note-taking application and try it out.
+
+If you want to run Breez at autostart check this out: [How to run a python script on login using pyautostart for macOS | by Aero Byte | Medium - aerobyte.medium.com/](https://aerobyte.medium.com/how-to-run-a-python-script-on-login-using-pyautostart-for-macos-539a4384a240)
