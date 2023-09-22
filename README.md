@@ -9,7 +9,7 @@ All of this happens by just tapping a single shortcut, so you can focus on the t
 It works much better than traditional autocorrection as it fixes a sentence within its complete context.
 
 Demo:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/A49u4Lu2meU?si=RDgcsnZ5riG8DfMT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[Demo Video](https://www.youtube.com/embed/A49u4Lu2meU?si=RDgcsnZ5riG8DfMT)
 
 ## roadmap
 - Shortcut for offline dictation using Whisper
