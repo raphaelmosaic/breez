@@ -3,7 +3,7 @@
 ## what is breez
 1. Selects the current line in the currently active application anywhere on macOS (Apple Notes, Gmail, Notion, Obsidian...)
 2. Grammar fixes the sentence using GPT 3.5 Turbo
-3. Pastes the selection
+3. Pastes the fixed text
 
 All of this happens by just tapping a single shortcut, so you can focus on the thoughts you want to convey instead of fixing typos!
 It works much better than traditional autocorrection as it fixes a sentence within its complete context.
