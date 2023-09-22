@@ -8,7 +8,8 @@
 All of this happens by just tapping a single shortcut, so you can focus on the thoughts you want to convey instead of fixing typos!
 It works much better than traditional autocorrection as it fixes a sentence within its complete context.
 
-[Demo Video](https://www.youtube.com/embed/A49u4Lu2meU?si=RDgcsnZ5riG8DfMT)
+
+![Demo Video](https://img.youtube.com/vi/A49u4Lu2meU/0.jpg)](https://www.youtube.com/watch?v=A49u4Lu2meU)
 
 ## roadmap
 - Shortcut for offline dictation using Whisper
