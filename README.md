@@ -10,7 +10,8 @@ It works much better than traditional autocorrection as it fixes a sentence with
 
 
 [![Demo Video](https://img.youtube.com/vi/A49u4Lu2meU/0.jpg)](https://www.youtube.com/watch?v=A49u4Lu2meU)
-[Video Link](https://www.youtube.com/embed/A49u4Lu2meU?si=RDgcsnZ5riG8DfMT)
+
+- [Watch the demo video](https://www.youtube.com/embed/A49u4Lu2meU?si=RDgcsnZ5riG8DfMT)
 
 ## roadmap
 - Shortcut for offline dictation using Whisper
