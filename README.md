@@ -16,20 +16,19 @@ It works much better than traditional autocorrection as it fixes a sentence with
 - Windows support
 
 ## install
-1. Drag breez from the downloads folder **into the root of your home folder**
-	1. ![600](https://i.imgur.com/tQHv55X.png)
-	2. Should look like this:
-	3. ![600](https://i.imgur.com/BSKXrBs.png)
-2. Right click on installer and click on "Open" - to install the required packages on your computer
+1. Clone the repository into **the root of your home folder**
+	1. Should look like this:
+	2. ![600](https://i.imgur.com/BSKXrBs.png)
+2. In the **dist** folder right click on **1_install_packages** and click on "Open" - to install the required packages on your computer
 	1. ![](https://i.imgur.com/7HhRX4q.gif)
 	2. You can then close the terminal window
-3. Next right click on the "**Create Config**" script and click on "Open" again
+3. Next right click on the **2_create_config** script and click on "Open" again
 	1. When the script ask you if you want to enter a new OpenAI api key press `y` on the keyboard and then `Enter`
 	2. Paste your OpenAI API Key which you can find here https://platform.openai.com/account/api-keys
 	3. If you dont have an API Key yet, create one ![](https://i.imgur.com/jiQyTjr.png)
 	4. Copy the Key ![](https://i.imgur.com/Ka9Apse.png)
 4. Finally select the shortcut you want to use to execute Breez - right now you can choose between `CMD + .`,  `CMD + :` and `F10` ![](https://i.imgur.com/a6PB9XL.gif)
-5. Open the Breez folder again and right click on run_breez, then click on "Open with Terminal" ![](https://i.imgur.com/WhQ9urU.gif)
+5. Open the Breez folder again and right click on **3_run_breez**, then click on "Open with Terminal" ![](https://i.imgur.com/WhQ9urU.gif)
 	1. Don't close this terminal window - so that breez can run in the background.
 6. When you now trigger Breez for the first time by pressing the shortcut you selected, you will see the following window.
 	1. ![](https://i.imgur.com/cO3SttJ.png)
