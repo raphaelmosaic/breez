@@ -9,7 +9,7 @@ All of this happens by just tapping a single shortcut, so you can focus on the t
 It works much better than traditional autocorrection as it fixes a sentence within its complete context.
 
 
-[![Demo Video](https://img.youtube.com/vi/A49u4Lu2meU/0.jpg)](https://www.youtube.com/watch?v=A49u4Lu2meU)
+- [![Demo Video](https://img.youtube.com/vi/A49u4Lu2meU/0.jpg)](https://www.youtube.com/watch?v=A49u4Lu2meU)
 
 - [Watch the demo video](https://www.youtube.com/embed/A49u4Lu2meU?si=RDgcsnZ5riG8DfMT)
 
