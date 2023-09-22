@@ -3,3 +3,4 @@ build/
 files/build/
 files/dist/
 *.spec
+*.DS_Store
