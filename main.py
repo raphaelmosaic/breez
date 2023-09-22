@@ -2,6 +2,7 @@
 import time
 import json
 import re
+from numpy import fix
 import requests
 from pynput import keyboard
 from pynput.keyboard import Key
@@ -81,6 +82,16 @@ def cmd_v():
     controller.release(Key.cmd)
     time.sleep(0.1)
 
+def fix_and_paste():
+    copied_text = paste()
+
+    if copied_text:  # Only proceed if copied_text is not None or empty
+            whitespace, content = re.match(r'(\s*-?\s*)(.*)', copied_text).groups()
+            fixed_text = call_gpt3_api(content)
+            final_text = whitespace + fixed_text
+            copy(final_text)
+            cmd_v()
+⚡
 def checkif_active_window(app_name):
     script = 'tell application "System Events" to set frontApp to name of first application process whose frontmost is true'
     front_app = subprocess.check_output(["osascript", "-e", script]).strip().decode("utf-8")
@@ -90,11 +101,13 @@ def checkif_active_window(app_name):
 def select_current_line_in_heptabase():
     cmd_a()
     cmd_c()
+    fix_and_paste()
 
 # Notion
 def select_current_line_in_notion():
     cmd_a()
     cmd_c()
+    fix_and_paste()
 
 # iA Writer
 def select_current_line_in_ia_writer():
@@ -107,18 +120,39 @@ def select_current_line_in_ia_writer():
         controller.press(Key.up)
         controller.release(Key.up)
     cmd_c()
+    fix_and_paste()
 
 # General current line
 def select_current_line_general():
+    global cmd_down 
+    
+    # Step 1: Insert unique character
     controller = keyboard.Controller()
-    with controller.pressed(Key.cmd):
-        controller.press(Key.right)
-        controller.release(Key.right)
-    time.sleep(0.1)
-    with controller.pressed(Key.cmd, Key.shift):
-        controller.press(Key.left)
-        controller.release(Key.left)
+    controller.type('⚡')
+    
+    # Step 2: Select and copy everything
+    cmd_a()
     cmd_c()
+    
+    # Step 3: Regex to isolate the sentence with unique character
+    full_text = paste()
+    match = re.search(r'([^.⚡\n]*⚡[^.⚡\n]*)', full_text)
+    
+    if match:
+        unique_sentence = match.group(1)
+        before_text = full_text[:match.start()]
+        after_text = full_text[match.end():]
+        
+        # Step 4: Grammar fix the isolated sentence
+        unique_sentence = unique_sentence.replace('⚡', '')  # Remove the unique character
+        fixed_text = call_gpt3_api(unique_sentence)
+        
+        # Step 5: Merge and paste everything back
+        final_text = before_text + fixed_text + after_text
+        copy(final_text)
+        cmd_v()
+    else:
+        print("Unique character not found in the copied text.")
     
 # Main function to be triggered on hotkey press
 def on_activate():
@@ -132,16 +166,6 @@ def on_activate():
         select_current_line_in_heptabase()
     else:
         select_current_line_general()
-
-    copied_text = paste()
-
-    if copied_text:  # Only proceed if copied_text is not None or empty
-            whitespace, content = re.match(r'(\s*-?\s*)(.*)', copied_text).groups()
-            fixed_text = call_gpt3_api(content)
-            final_text = whitespace + fixed_text
-            copy(final_text)
-            cmd_v()
-
 
 def on_press(key):
     global cmd_down
