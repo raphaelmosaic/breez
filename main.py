@@ -91,7 +91,7 @@ def fix_and_paste():
             final_text = whitespace + fixed_text
             copy(final_text)
             cmd_v()
-⚡
+
 def checkif_active_window(app_name):
     script = 'tell application "System Events" to set frontApp to name of first application process whose frontmost is true'
     front_app = subprocess.check_output(["osascript", "-e", script]).strip().decode("utf-8")
