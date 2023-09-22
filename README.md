@@ -8,7 +8,6 @@
 All of this happens by just tapping a single shortcut, so you can focus on the thoughts you want to convey instead of fixing typos!
 It works much better than traditional autocorrection as it fixes a sentence within its complete context.
 
-Demo:
 [Demo Video](https://www.youtube.com/embed/A49u4Lu2meU?si=RDgcsnZ5riG8DfMT)
 
 ## roadmap
