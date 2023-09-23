@@ -24,6 +24,7 @@ class BreezApp(rumps.App):
     def __init__(self):
         super(BreezApp, self).__init__("Breez")
         self.menu = ["Run Breez"]
+        self.icon = "resources/menubar-logo.svg"  # Set the icon here. Make sure the image is in the same folder as the script.
         
     @rumps.clicked("Run Breez")
     def on_run(self, sender):
