@@ -1,5 +1,3 @@
-# breez
-
 ## what is breez
 1. Selects the current line in the currently active application anywhere on macOS (Apple Notes, Gmail, Notion, Obsidian...)
 2. Grammar fixes the sentence using GPT 3.5 Turbo
