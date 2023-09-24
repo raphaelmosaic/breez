@@ -2,7 +2,7 @@ import subprocess
 
 def install_packages():
     try:
-        subprocess.run(["pip", "install", "requests", "pynput", "pyperclip"])
+        subprocess.run(["pip", "install", "requests", "pynput", "pyperclip, rumps"])
     except Exception:
         try:
             subprocess.run(["pip3", "install", "requests", "pynput", "pyperclip"])

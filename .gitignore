@@ -2,5 +2,6 @@ config.json
 build/
 files/build/
 files/dist/
+build/bdist.macosx-13-arm64/
 *.spec
 *.DS_Store

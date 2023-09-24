@@ -4,18 +4,15 @@ import os
 
 # Function to run the Breez script
 def run_breez(sender):
-    home_directory = os.path.expanduser("~")  # Dynamically get the home directory
-    breez_home_folder = os.path.join(home_directory, "breez")  # Append the 'breez' folder to it
-    
-    # Full path to main.py
+    home_directory = os.path.expanduser("~")
+    breez_home_folder = os.path.join(home_directory, "breez-main")
     main_script = os.path.join(breez_home_folder, "main.py")
-    
     try:
         print("Breez is running. Press the shortcut you selected to fix the current line in any application.")
-        subprocess.run(["python", main_script])  # Try running the script with Python
+        subprocess.run(["python", main_script])
     except FileNotFoundError:
         try:
-            subprocess.run(["python3", main_script])  # If Python failed, try Python3
+            subprocess.run(["python3", main_script])
         except Exception as e:
             print(f"Failed to run Breez: {e}")
 
@@ -24,7 +21,8 @@ class BreezApp(rumps.App):
     def __init__(self):
         super(BreezApp, self).__init__("Breez")
         self.menu = ["Run Breez"]
-        self.icon = "resources/menubar-logo.svg"  # Set the icon here. Make sure the image is in the same folder as the script.
+        icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "resources", "menubar-logo.svg")
+        self.icon = icon_path  # Adjusted the icon path here
         
     @rumps.clicked("Run Breez")
     def on_run(self, sender):
