@@ -11,6 +11,8 @@ import subprocess
 import json
 import os
 
+print("Script is running")
+
 # Load Configuration from JSON
 config_data = {}
 config_path = 'config.json'
