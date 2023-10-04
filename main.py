@@ -10,10 +10,11 @@ from pyperclip import copy, paste
 import subprocess
 import json
 import os
+import webbrowser
 
 print("Script is running")
 
-# Load Configuration from JSON
+# Load Configuration from JSON"""  """
 config_data = {}
 config_path = 'config.json'
 if os.path.exists(config_path):
@@ -105,6 +106,11 @@ def select_current_line_in_heptabase():
     cmd_c()
     fix_and_paste()
 
+# Obsidian
+def select_current_line_in_obsidian():
+    obsidian_uri = "obsidian://advanced-uri?vault=pkm&commandid=select-current-line%253Aselect-current-line-on-keystroke"
+    os.system(f"open '{obsidian_uri}'")  # For macOS
+
 # Notion
 def select_current_line_in_notion():
     cmd_a()
@@ -166,6 +172,8 @@ def on_activate():
         select_current_line_in_notion()
     elif checkif_active_window("Heptabase"):
         select_current_line_in_heptabase()
+    elif checkif_active_window("Obsidian"):
+        select_current_line_in_obsidian()
     else:
         select_current_line_general()
 
