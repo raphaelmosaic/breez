@@ -108,8 +108,8 @@ def select_current_line_in_heptabase():
 
 # Obsidian
 def select_current_line_in_obsidian():
-    obsidian_uri = "obsidian://advanced-uri?vault=pkm&commandid=select-current-line%253Aselect-current-line-on-keystroke"
-    os.system(f"open '{obsidian_uri}'")  # For macOS
+    cmd_a()
+    cmd_c()
     fix_and_paste()
 
 # Notion
